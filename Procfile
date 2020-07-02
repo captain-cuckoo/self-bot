@@ -1,1 +1,1 @@
-worker: python innocent.py
+worker: python self-bot.py
