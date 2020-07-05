@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup as bs
 import cowsay
 import subprocess
 import math
-username = 'captain_cuckoo' #imgur account username
-password = 'asdasdasd' #imgur account password
+username = 'USERNAME' #imgflip account username
+password = 'PASSWORD' #imgflip account password
 
 search = 'https://imgflip.com/memesearch?q='
 
