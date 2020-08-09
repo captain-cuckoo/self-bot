@@ -1,4 +1,4 @@
 # self-bot
 ## you will get banned for using this if youre not careful
 self bots used to be allowed before people started exclusively using them for dumb shit like spamming 
-youre free to do whatever you want with this
+youre free to do whatever you want with this (this works only in 3.6 cause discord api sux)
