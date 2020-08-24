@@ -1,12 +1,125 @@
 import requests
 from bs4 import BeautifulSoup as bs
-import cowsay
-import subprocess
 import math
-username = 'USERNAME' #imgflip account username
-password = 'PASSWORD' #imgflip account password
+from googletrans import Translator
+
+
+
+username = 'captain_cuckoo' #imgflip account username
+password = 'asdasdasd' #imgflip account password
 
 search = 'https://imgflip.com/memesearch?q='
+
+LANGUAGES = {
+    'af': 'afrikaans',
+    'sq': 'albanian',
+    'am': 'amharic',
+    'ar': 'arabic',
+    'hy': 'armenian',
+    'az': 'azerbaijani',
+    'eu': 'basque',
+    'be': 'belarusian',
+    'bn': 'bengali',
+    'bs': 'bosnian',
+    'bg': 'bulgarian',
+    'ca': 'catalan',
+    'ceb': 'cebuano',
+    'ny': 'chichewa',
+    'zh-cn': 'chinese (simplified)',
+    'zh-tw': 'chinese (traditional)',
+    'co': 'corsican',
+    'hr': 'croatian',
+    'cs': 'czech',
+    'da': 'danish',
+    'nl': 'dutch',
+    'en': 'english',
+    'eo': 'esperanto',
+    'et': 'estonian',
+    'tl': 'filipino',
+    'fi': 'finnish',
+    'fr': 'french',
+    'fy': 'frisian',
+    'gl': 'galician',
+    'ka': 'georgian',
+    'de': 'german',
+    'el': 'greek',
+    'gu': 'gujarati',
+    'ht': 'haitian creole',
+    'ha': 'hausa',
+    'haw': 'hawaiian',
+    'iw': 'hebrew',
+    'hi': 'hindi',
+    'hmn': 'hmong',
+    'hu': 'hungarian',
+    'is': 'icelandic',
+    'ig': 'igbo',
+    'id': 'indonesian',
+    'ga': 'irish',
+    'it': 'italian',
+    'ja': 'japanese',
+    'jw': 'javanese',
+    'kn': 'kannada',
+    'kk': 'kazakh',
+    'km': 'khmer',
+    'ko': 'korean',
+    'ku': 'kurdish (kurmanji)',
+    'ky': 'kyrgyz',
+    'lo': 'lao',
+    'la': 'latin',
+    'lv': 'latvian',
+    'lt': 'lithuanian',
+    'lb': 'luxembourgish',
+    'mk': 'macedonian',
+    'mg': 'malagasy',
+    'ms': 'malay',
+    'ml': 'malayalam',
+    'mt': 'maltese',
+    'mi': 'maori',
+    'mr': 'marathi',
+    'mn': 'mongolian',
+    'my': 'myanmar (burmese)',
+    'ne': 'nepali',
+    'no': 'norwegian',
+    'ps': 'pashto',
+    'fa': 'persian',
+    'pl': 'polish',
+    'pt': 'portuguese',
+    'pa': 'punjabi',
+    'ro': 'romanian',
+    'ru': 'russian',
+    'sm': 'samoan',
+    'gd': 'scots gaelic',
+    'sr': 'serbian',
+    'st': 'sesotho',
+    'sn': 'shona',
+    'sd': 'sindhi',
+    'si': 'sinhala',
+    'sk': 'slovak',
+    'sl': 'slovenian',
+    'so': 'somali',
+    'es': 'spanish',
+    'su': 'sundanese',
+    'sw': 'swahili',
+    'sv': 'swedish',
+    'tg': 'tajik',
+    'ta': 'tamil',
+    'te': 'telugu',
+    'th': 'thai',
+    'tr': 'turkish',
+    'uk': 'ukrainian',
+    'ur': 'urdu',
+    'uz': 'uzbek',
+    'vi': 'vietnamese',
+    'cy': 'welsh',
+    'xh': 'xhosa',
+    'yi': 'yiddish',
+    'yo': 'yoruba',
+    'zu': 'zulu',
+    'fil': 'Filipino',
+    'he': 'Hebrew'
+}
+
+lang = dict(map(reversed, LANGUAGES.items()))
 
 #this existss only cause imgflip is a piece of shit who doesnt have the search integrated into their api
 def SearchMeme(name):
@@ -17,7 +130,7 @@ def SearchMeme(name):
 			search = search + x[i]
 		else:
 			search = search + '+' + x[i]
-	
+	search = search + "&nsfw=on"
 	page = requests.get(search) 
 	
 	soup = bs(page.content, 'html5lib')
@@ -58,14 +171,12 @@ def GenerateMeme(id,*args):
 	    'username':username,
 	    'password':password,
 	    'template_id':id,
-	    'text0':None,
-	    'text1':None,
+	    'text0':" ",
+	    'text1':" ",
 	}
 	for i in range(0,len(args)):
 		params['text'+str(i)] = args[i]
-	print(params)
 	response = requests.request('POST',URL,params=params).json()
-	print(response)
 	data = response['data']
 	return(data['url'])
 
@@ -141,14 +252,23 @@ def bunny(inStr):
 
 print(bunny("this shit better work"))
 
-#MOO
-def GetCow(text):
-	command = "python -m cowsay"+ " "+text
-	proc = subprocess.run(command, shell=True, capture_output=True)
-	x = proc.stdout.decode()
-	return x
 
 
+#translate
+def what(text):
+	translator = Translator()
+	translation = translator.translate(text)
+	return translation.text
+
+
+def s(l,text):
+	translator = Translator()
+	language = lang[l]
+	translation = translator.translate(text,dest=language)
+	return translation.text
+
+
+print(s('german',"hello how are you"))
 
 
 	
