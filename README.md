@@ -91,7 +91,7 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ## spread -Spread text and annoy people  
   
 ### Format  
-#### ```~sprea whatever you want to annoy people with```  
+#### ```~spread whatever you want to annoy people with```  
 ### Example  
 ![alt text](https://cdn.discordapp.com/attachments/747433945884393482/747436338508333127/unknown.png)  
   
