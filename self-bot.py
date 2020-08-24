@@ -1,14 +1,14 @@
 import discord
 from discord.ext import commands
-from meme import GetMeme,SearchEmoji,generateUwU,bunny,GetCow
+from meme import GetMeme,SearchEmoji,generateUwU,bunny,what,s
 import time
 import random
 from animals import Animals
-
+import asyncio
 #config
 token = "ACCOUNT_TOKEN"
 prefix = "~" 
-user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+
 
 print ("starting")
 
@@ -30,6 +30,19 @@ try:
     # A secondary check to ensure nobody but the owner can run these commands.
 
     #MEME
+
+    @commands.check(self_check)
+    @bot.command(pass_context=True)
+    async def emb(ctx,title,desc=None):
+        await ctx.message.delete()
+        embed = discord.Embed(
+                title = title,
+                description=desc,
+                colour = discord.Colour.blue())
+        await ctx.send(embed = embed)
+        
+
+    
     @commands.check(self_check)
     @bot.command(pass_context=True)
     async def meme(ctx,*args):
@@ -37,9 +50,14 @@ try:
         await ctx.message.delete()
         try:
             link = GetMeme(*args)
-            await ctx.send(link)
+            embed = discord.Embed(
+                title = None,
+                colour = discord.Colour.blue())
+            embed.set_image(url = link)
+            await ctx.send(embed = embed)
+            
         except:
-            await ctx.send("template not found :(")
+            await ctx.send("```template not found :(```")
             
 
     #random lmgtfy implementation cause why not
@@ -133,20 +151,37 @@ try:
         await ctx.send(fuck)
 
 
-    #cow command
+
+
+
+    #translate
     @commands.check(self_check)
     @bot.command(pass_context=True)
-    async def cow(ctx,*args):
+    async def translate(ctx,*args):
         await ctx.message.delete()
         x = args
         text = ''
         for i in x:
             text = text+ " " +i
-        shit = "```"
-        final = GetCow(text)
         
-        fuck = shit + str(final) + shit 
-        await ctx.send(fuck)
+        final = what(text)
+        final = "```"+text+ " -> "+ final+ "```"
+        await ctx.send(final)
+     
+
+
+    #language
+    @commands.check(self_check)
+    @bot.command(pass_context=True)
+    async def say(ctx,lang,*args):
+        await ctx.message.delete()
+        x = args
+        text = ''
+        for i in x:
+            text = text+ " " +i
+        
+        final = s(lang,text)
+        await ctx.send(final)
      
 
 
@@ -179,9 +214,25 @@ try:
         message = await ctx.send("Pong!")
         ping = (((time.monotonic() - before))/2) * 1000
         await message.edit(content=f"Pong! :ping_pong: `{int(ping)}ms`")
+
+
+    @bot.command()
+    async def gay(ctx,text='so are any of you **NOT** gay?',time=5):
+        await ctx.message.delete()
+        message1 = await ctx.send(text)
+        await asyncio.sleep(time)
+        msg1 = await bot.wait_for('message')
+
         
+        # OR `check=lambda m: m.author == ctx.author`
+        await message1.edit(content="https://cdn.discordapp.com/attachments/691681269167161354/746351444810006679/eemxonrxj9151.png")
+        message2 = await ctx.send('https://cdn.discordapp.com/attachments/691681269167161354/746351506936168458/1ly9dyy0k9151.png')
+
+
+
 except:
     pass
 
 bot.run(token, bot=False)
 # Starts the bot by passing it a token and telling it it isn't really a bot.
+
