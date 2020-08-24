@@ -45,7 +45,7 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
   
 ## emoji - Get kaomojis related to your text   
   
-### ### Format  
+### Format  
 #### ```~emoji whatever you want no quotes needed```  
 ### Example   
 ![alt text](https://cdn.discordapp.com/attachments/747433945884393482/747434629925175376/unknown.png)  
