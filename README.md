@@ -2,7 +2,19 @@
 ## you will get banned for using this if youre not careful  
 self bots used to be allowed before people started exclusively using them for dumb shit like spamming   
 youre free to do whatever you want with this (this works only in 3.6 cause discord api sux)  
-  
+
+# Quickstart 
+
+## 1) Get you account token and add it to the self-bot.py file
+
+## 2) Create an imgflip account and enter the credentials into meme.py file
+
+## 3) Install the requirements by ```pip install -r requirements.txt```  
+
+## 4) Run self-bot.py by ```python self-bot.py```
+
+## 5) Never contact me if something goes wrong or if you get reported
+
 # Commands  
 ## animal - gives you animal pictures  
 ### Format  
