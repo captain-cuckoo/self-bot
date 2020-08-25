@@ -101,7 +101,8 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ### Example  
 ![alt text](https://cdn.discordapp.com/attachments/747433945884393482/747436509212442694/unknown.png)  
  
-## say - Speak in any language you want  
+## say - Speak in any language you want
+[Heres a list of languages](https://py-googletrans.readthedocs.io/en/latest/#googletrans-languages)
 ### Format  
 #### ```~say <language> whatever you want to say```  
 ### Example  
