@@ -115,5 +115,9 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ### Example  
 ![alt text](https://media.discordapp.net/attachments/747433945884393482/747435608565219399/unknown.png)  
 
+## zucc - **ZUCC** 
+### Format  
+#### ```~zucc```
+
 
   
