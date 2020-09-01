@@ -227,6 +227,20 @@ try:
         # OR `check=lambda m: m.author == ctx.author`
         await message1.edit(content="https://cdn.discordapp.com/attachments/691681269167161354/746351444810006679/eemxonrxj9151.png")
         message2 = await ctx.send('https://cdn.discordapp.com/attachments/691681269167161354/746351506936168458/1ly9dyy0k9151.png')
+        
+        
+    @bot.command()
+    async def zucc(ctx):
+        await ctx.message.delete()
+        message1 = await ctx.send("**YOU**")
+        message2 = await ctx.send("**WANT SOME**")
+        message3 = await ctx.send("**ZUCC???**")
+
+
+        await message1.edit(content="https://media.discordapp.net/attachments/747494617632604246/749690924790972446/118302201_10223945139076765_6234081680201358384_n.png")
+        await message2.edit(content="https://media.discordapp.net/attachments/747494617632604246/749690943388516352/118194658_10223945139756782_44090700492220065_n.png")
+        await message3.edit(content="https://media.discordapp.net/attachments/747494617632604246/749690966620766248/118547081_10223945140196793_2156471866659357925_n.png")
+
 
 
 
