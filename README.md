@@ -1,8 +1,8 @@
-# self-bot  
-## you will get banned for using this if youre not careful  
-self bots used to be allowed before people started exclusively using them for dumb shit like spamming   
-youre free to do whatever you want with this (this works only in 3.6 cause discord api sux).
-**I definitely dont use this myself at all and it is just a test pls dont ban me**  
+# Self-bot - You will get banned for using this if youre not careful!
+Self bots used to be allowed before people started exclusively using them for dumb shit like spamming   
+youre free to do whatever you want with this (this works only in python 3.6 cause discord api sux).
+
+(**I definitely dont use this myself at all and it is just a test pls dont ban me**)
 
 # Quickstart 
 
@@ -17,13 +17,13 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ### 5) Never contact me if something goes wrong or if you get reported
 
 # Commands  
-## animal - gives you animal pictures  
+## animal - Gives you animal pictures  
 ### Format  
 #### ```~animal "<animal name>"```  
 ### Example  
 ![alt text](https://cdn.discordapp.com/attachments/747433945884393482/747433962384785469/unknown.png)  
   
-## b - replaces every single b with 🅱️  
+## b - Replaces every single b with 🅱️  
   
 ### Format  
 #### ```~b whatever your text is no quotes needed```  
@@ -96,7 +96,7 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ### Example  
 ![alt text](https://cdn.discordapp.com/attachments/747433945884393482/747436338508333127/unknown.png)  
   
-## uwu - wuwify your sentences  
+## uwu - uwuwify your sentences  
 ### Format  
 #### ```~uwu whatever you want to say you fucking degenerate```  
 ### Example  
@@ -113,11 +113,11 @@ youre free to do whatever you want with this (this works only in 3.6 cause disco
 ### Format  
 #### ```~translate whatever you want to translate```  
 ### Example  
-![alt text](https://media.discordapp.net/attachments/747433945884393482/747435608565219399/unknown.png)  
+  
 
 ## zucc - **ZUCC** 
 ### Format  
 #### ```~zucc```
-
+![alt text](https://cdn.discordapp.com/attachments/715978707621249112/750805338030211113/unknown.png)
 
   
