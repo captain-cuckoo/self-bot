@@ -5,8 +5,8 @@ from googletrans import Translator
 
 
 
-username = 'captain_cuckoo' #imgflip account username
-password = 'asdasdasd' #imgflip account password
+username = '' #imgflip account username
+password = '' #imgflip account password
 
 search = 'https://imgflip.com/memesearch?q='
 
