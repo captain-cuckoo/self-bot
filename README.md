@@ -115,9 +115,5 @@ youre free to do whatever you want with this (this works only in python 3.6 caus
 ### Example  
   
 
-## zucc - **ZUCC** 
-### Format  
-#### ```~zucc```
-![alt text](https://cdn.discordapp.com/attachments/715978707621249112/750805338030211113/unknown.png)
 
   
