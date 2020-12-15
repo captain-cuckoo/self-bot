@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from meme import GetMeme,SearchEmoji,generateUwU,bunny,what,s
+from meme import GetMeme,SearchEmoji,generateUwU,bunny
 import time
 import random
 from animals import Animals
@@ -149,41 +149,6 @@ try:
         final = bunny(text)
         fuck = "```" + final +"```"
         await ctx.send(fuck)
-
-
-
-
-
-    #translate
-    @commands.check(self_check)
-    @bot.command(pass_context=True)
-    async def translate(ctx,*args):
-        await ctx.message.delete()
-        x = args
-        text = ''
-        for i in x:
-            text = text+ " " +i
-        
-        final = what(text)
-        final = "```"+text+ " -> "+ final+ "```"
-        await ctx.send(final)
-     
-
-
-    #language
-    @commands.check(self_check)
-    @bot.command(pass_context=True)
-    async def say(ctx,lang,*args):
-        await ctx.message.delete()
-        x = args
-        text = ''
-        for i in x:
-            text = text+ " " +i
-        
-        final = s(lang,text)
-        await ctx.send(final)
-     
-
 
 
     #B command
