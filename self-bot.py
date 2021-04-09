@@ -193,9 +193,6 @@ try:
         await message1.edit(content="https://cdn.discordapp.com/attachments/691681269167161354/746351444810006679/eemxonrxj9151.png")
         message2 = await ctx.send('https://cdn.discordapp.com/attachments/691681269167161354/746351506936168458/1ly9dyy0k9151.png')
         
-
-
-
 except:
     pass
 
