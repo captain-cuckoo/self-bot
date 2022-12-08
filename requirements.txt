@@ -5,7 +5,7 @@ async-timeout==3.0.1
 attrs==19.3.0
 beautiful==0.0.2
 beautifulsoup4==4.5.3
-certifi==2020.6.20
+certifi==2022.12.7
 cffi==1.14.1
 chardet==3.0.4
 colour==0.1.4
